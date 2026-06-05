@@ -1,20 +1,22 @@
-revreader
+![revreader](https://img.shields.io/badge/revreader-EPUB%20reader-000000?style=for-the-badge&logo=readthedocs&logoColor=00ff00) ![python](https://img.shields.io/badge/python-3.11+-000000?style=for-the-badge&logo=python&logoColor=00ff00) ![license](https://img.shields.io/github/license/Rumyp/revreader?style=for-the-badge&color=000000&logoColor=00ff00) ![stars](https://img.shields.io/github/stars/Rumyp/revreader?style=for-the-badge&color=000000&logoColor=00ff00) ![linux](https://img.shields.io/badge/Linux-AUR-000000?style=for-the-badge&logo=linux&logoColor=00ff00) ![windows](https://img.shields.io/badge/Windows-winget-000000?style=for-the-badge&logo=windows&logoColor=00ff00)
 
-A small Python EPUB reader with terminal and Qt GUI modes.
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&pause=1000&color=00FF00&center=true&vCenter=true&width=600&lines=revreader+—+terminal+%26+GUI;./revreader.py+mybook.epub;./revreader.py+-t+mybook.epub">
+
+revreader — minimal, focused EPUB reader for terminal and desktop.
 
 Usage
 
-- Terminal: revreader -t mybook.epub
-- GUI: revreader.py mybook.epub  (or run and press Ctrl+O)
+- GUI: ./revreader.py mybook.epub  (or run and press Ctrl+O)
+- Terminal: ./revreader.py -t mybook.epub
 
-Dependencies
+Install
 
-- Python 3.8+
-- For GUI: PySide6 (or PyQt6). Install with: pip install PySide6
+- pip install -r requirements.txt
 
-Notes
+License
 
-- The GUI attempts to load embedded fonts and inline images from EPUB files.
-- The terminal reader renders plain text with headings and pagination.
+- MIT — see LICENSE
 
-Author: rumyp
+Author
+
+rumyp
