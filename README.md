@@ -2,9 +2,9 @@
 
 revreader — compact terminal + GUI EPUB reader.
 
-Install (AUR only)
+Install (AUR)
 
-paru -S revreader
+yay -S revreader
 
 Usage
 
