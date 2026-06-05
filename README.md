@@ -1,52 +1,102 @@
 ![revreader](https://img.shields.io/badge/revreader-EPUB%20reader-000000?style=for-the-badge&logo=readthedocs&logoColor=00ff00) ![python](https://img.shields.io/badge/python-3.11+-000000?style=for-the-badge&logo=python&logoColor=00ff00) ![license](https://img.shields.io/github/license/Rumyp/revreader?style=for-the-badge&color=000000&logoColor=00ff00) ![stars](https://img.shields.io/github/stars/Rumyp/revreader?style=for-the-badge&color=000000&logoColor=00ff00) ![linux](https://img.shields.io/badge/Linux-AUR-000000?style=for-the-badge&logo=linux&logoColor=00ff00) ![windows](https://img.shields.io/badge/Windows-winget-000000?style=for-the-badge&logo=windows&logoColor=00ff00)
 
-revreader — compact terminal + GUI EPUB reader.
+![revreader](https://img.shields.io/badge/revreader-EPUB%20reader-000000?style=for-the-badge&logo=readthedocs&logoColor=00ff00) ![python](https://img.shields.io/badge/python-3.11+-000000?style=for-the-badge&logo=python&logoColor=00ff00) ![license](https://img.shields.io/github/license/Rumyp/revreader?style=for-the-badge&color=000000&logoColor=00ff00) ![stars](https://img.shields.io/github/stars/Rumyp/revreader?style=for-the-badge&color=000000&logoColor=00ff00) ![linux](https://img.shields.io/badge/Linux-AUR-000000?style=for-the-badge&logo=linux&logoColor=00ff00) ![windows](https://img.shields.io/badge/Windows-winget-000000?style=for-the-badge&logo=windows&logoColor=00ff00)
 
-Installation
+# revreader
 
-- AUR (Arch Linux):
-  - paru (recommended): paru -S revreader
-  - yay: yay -S revreader
+Compact terminal + GUI EPUB reader.
 
-- pip (cross-platform):
-  python3 -m pip install --user revreader
+## Installation
 
-- Quick installer (curl) — Linux / macOS:
-  curl -sL https://github.com/Rumyp/revreader/raw/main/install.sh | sh
+### AUR (Arch Linux)
 
-- Quick installer (PowerShell) — Windows:
-  iwr -useb https://github.com/Rumyp/revreader/raw/main/install.ps1 | iex
+- paru (recommended):
 
-- winget (Windows):
-  winget install --id revreader
+```bash
+paru -S revreader
+```
 
-Manual Windows installer
+- yay:
 
-- If a signed installer is provided in Releases, download it and run.
-- Verify SHA256 before running: sha256sum revreader-setup.exe
+```bash
+yay -S revreader
+```
 
-CI / Releases
+### pip (cross-platform)
 
-- Recommended: GitHub Actions builds Windows EXE (PyInstaller + NSIS) and attaches artifacts to Releases. Add PYPI_API_TOKEN to repo secrets to enable PyPI publishing.
+```bash
+python3 -m pip install --user revreader
+```
 
-Usage
+### Quick installer (curl) — Linux / macOS
 
-- GUI: revreader mybook.epub
-- Terminal: revreader -t mybook.epub
+```bash
+curl -sL https://github.com/Rumyp/revreader/raw/main/install.sh | sh
+```
 
-Verify installation
+### Quick installer (PowerShell) — Windows
 
-- Which binary: command -v revreader (Linux/macOS) or Get-Command revreader (PowerShell).
+```powershell
+iwr -useb https://github.com/Rumyp/revreader/raw/main/install.ps1 | iex
+```
 
-Security
+### winget (Windows)
 
-- Inspect install.sh / install.ps1 before running. The curl|sh and iwr|iex patterns execute remote code — use only from trusted sources.
+```powershell
+winget install --id revreader
+```
 
-License
+## Manual Windows installer
+
+If a signed installer is attached to Releases, download and run it.
+
+Verify SHA256 before running:
+
+```bash
+sha256sum revreader-setup.exe
+```
+
+## CI / Releases
+
+Recommended: use GitHub Actions (windows-latest) to build a PyInstaller EXE and NSIS installer, upload artifacts to Releases, and publish to PyPI (add PYPI_API_TOKEN to repo secrets).
+
+## Usage
+
+- GUI:
+
+```bash
+revreader mybook.epub
+```
+
+- Terminal:
+
+```bash
+revreader -t mybook.epub
+```
+
+## Verify installation
+
+- Linux/macOS:
+
+```bash
+command -v revreader
+```
+
+- PowerShell:
+
+```powershell
+Get-Command revreader
+```
+
+## Security
+
+Inspect install.sh and install.ps1 before executing. Running remote scripts with curl|sh or iwr|iex runs code from the network—use only trusted sources.
+
+## License
 
 MIT — see LICENSE
 
-Author
+## Author
 
 rumyp — v1.0.1 (revreader)
 
