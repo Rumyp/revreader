@@ -1,0 +1,5 @@
+# Minimal runtime dependencies for revreader GUI
+PySide6>=6.5
+
+# Alternative (choose one):
+# PyQt6>=6.5

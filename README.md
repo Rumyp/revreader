@@ -5,7 +5,7 @@ A small Python EPUB reader with terminal and Qt GUI modes.
 Usage
 
 - Terminal: revreader -t mybook.epub
-- GUI: revreader mybook.epub  (or run and press Ctrl+O)
+- GUI: revreader.py mybook.epub  (or run and press Ctrl+O)
 
 Dependencies
 
