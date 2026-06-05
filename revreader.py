@@ -234,6 +234,13 @@ def launch_gui(path=None):
             print('Qt not available. Install PySide6 or PyQt6 to use GUI mode.')
             return
 
+    # create QApplication early to avoid 'Must construct a QApplication before a QWidget' errors
+    try:
+        QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_DontUseNativeDialogs, True)
+    except Exception:
+        pass
+    app = QtWidgets.QApplication([])
+
     class Window(QtWidgets.QMainWindow):
         def __init__(self, epub_path=None):
             super().__init__()
@@ -541,12 +548,7 @@ QDockWidget, QListWidget {{ background: {theme['toolbar']}; }}
         # apply theme and show content
         self.apply_theme()
 
-    # initialize app
-    try:
-        QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_DontUseNativeDialogs, True)
-    except Exception:
-        pass
-    app = QtWidgets.QApplication([])
+    # initialize and run
     w = Window(path)
     w.resize(900,700)
     w.show()
