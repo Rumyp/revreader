@@ -2,15 +2,51 @@
 
 revreader — compact terminal + GUI EPUB reader.
 
-Install (AUR)
+Installation
 
-yay -S revreader
+- AUR (Arch Linux):
+  - paru (recommended): paru -S revreader
+  - yay: yay -S revreader
+
+- pip (cross-platform):
+  python3 -m pip install --user revreader
+
+- Quick installer (curl) — Linux / macOS:
+  curl -sL https://github.com/Rumyp/revreader/raw/main/install.sh | sh
+
+- Quick installer (PowerShell) — Windows:
+  iwr -useb https://github.com/Rumyp/revreader/raw/main/install.ps1 | iex
+
+- winget (Windows):
+  winget install --id revreader
+
+Manual Windows installer
+
+- If a signed installer is provided in Releases, download it and run.
+- Verify SHA256 before running: sha256sum revreader-setup.exe
+
+CI / Releases
+
+- Recommended: GitHub Actions builds Windows EXE (PyInstaller + NSIS) and attaches artifacts to Releases. Add PYPI_API_TOKEN to repo secrets to enable PyPI publishing.
 
 Usage
 
-GUI: revreader mybook.epub
-Terminal: revreader -t mybook.epub
+- GUI: revreader mybook.epub
+- Terminal: revreader -t mybook.epub
 
-License: MIT
+Verify installation
 
-Author: rumyp
+- Which binary: command -v revreader (Linux/macOS) or Get-Command revreader (PowerShell).
+
+Security
+
+- Inspect install.sh / install.ps1 before running. The curl|sh and iwr|iex patterns execute remote code — use only from trusted sources.
+
+License
+
+MIT — see LICENSE
+
+Author
+
+rumyp — v1.0.1 (revreader)
+
