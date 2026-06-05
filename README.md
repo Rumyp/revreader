@@ -2,30 +2,30 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&pause=1000&color=00FF00&center=true&vCenter=true&width=600&lines=terminal+EPUB+reader...;paru+-S+revreader;winget+install+revreader">
 
-revreader — компактный, профессиональный EPUB‑ридер: терминал + лёгкий GUI. Поддерживает встроенные шрифты и обложки, переключение темы и удобную навигацию.
+revreader — a compact, professional EPUB reader for terminal and desktop. Supports embedded fonts and covers, theme switching, and straightforward navigation.
 
-Ключевые возможности
+Key features
 
-- Терминал: быстрая постраничная навигация, имитация книги.
-- GUI: Qt‑просмотрщик с поддержкой встроенных шрифтов и картинок (PySide6 / PyQt6).
-- Упаковки: AUR, PyPI (через GitHub Actions), Windows (winget — при наличии релиза).
-- Один исполняемый скрипт: revreader.py — просто запустить.
+- Terminal: fast paged reading with a book-like layout.
+- GUI: lightweight Qt viewer with embedded font and image support (PySide6 / PyQt6).
+- Packaging: AUR, PyPI (via GitHub Actions), and Windows (winget) on release.
+- Single executable script: revreader.py — run it and read.
 
-Установка
+Install
 
 - Arch (AUR): paru -S revreader
-- pip (если опубликовано): pip install revreader
+- pip (if published): pip install revreader
 - Windows (winget): winget install revreader
 
-Использование
+Usage
 
 - GUI: revreader mybook.epub
-- Терминал: revreader -t mybook.epub
+- Terminal: revreader -t mybook.epub
 
-Лицензия
+License
 
-MIT — см. LICENSE
+MIT — see LICENSE
 
-Автор
+Author
 
-rumyp — v1.0 (revreader)
+rumyp — v1.0.1 (revreader)
