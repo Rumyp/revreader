@@ -9,7 +9,6 @@ import hashlib
 import time
 from pathlib import Path
 
-# Terminal reader (kept simple)
 class SimpleHTMLTextExtractor(HTMLParser):
     def __init__(self):
         super().__init__()
